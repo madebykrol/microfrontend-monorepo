@@ -22,7 +22,7 @@
     "@angular-devkit/core" "11.0.7"
     rxjs "6.6.3"
 
-"@angular-devkit/build-angular@>=0.1100.0 < 0.1200.0", "@angular-devkit/build-angular@~0.1101.0":
+"@angular-devkit/build-angular@>=0.1100.0 < 0.1200.0", "@angular-devkit/build-angular@~0.1100.7":
   version "0.1100.7"
   resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-0.1100.7.tgz#e5577998e67e89137c2b7c9d232a58b2fdca91dc"
   integrity sha512-erc+AtSU46ZIX7A5dmeZ0/G/SQIbqMAGbTKZbf11GePyhT0JAAnfMQtOHMb6AaX85n4yQTg1uMo9f5+8V3lfKA==

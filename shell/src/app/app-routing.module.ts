@@ -6,14 +6,12 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () =>
-        loadRemoteModule({
-            remoteEntry: 'http://localhost:5000/remoteEntry.js',
+        loadRemoteModule({  
             remoteName: 'dashboard',
             exposedModule: './Dashboard'
         })
         .then(m => {
-          console.log(m);
-          return m.AppModule
+          return m.DashboardModule
         })
   },
 ];
