@@ -14,6 +14,17 @@ const routes: Routes = [
           return m.DashboardModule
         })
   },
+  {
+    path: 'catalog',
+    loadChildren: () =>
+        loadRemoteModule({  
+            remoteName: 'catalog',
+            exposedModule: './Catalog'
+        })
+        .then(m => {
+          return m.CatalogModule
+        })
+  },
 ];
 
 @NgModule({

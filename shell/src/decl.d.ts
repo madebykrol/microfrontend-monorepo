@@ -1,4 +1,6 @@
 declare module 'dashboard/Module';
+declare module 'catalog/Module';
+
 type Scope = unknown;
 type Factory = () => any;
 

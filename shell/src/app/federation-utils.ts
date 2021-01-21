@@ -3,13 +3,10 @@ const remoteMap = {}
 let isDefaultScopeInitialized = false;
 
 async function lookupExposedModule<T>(remoteName: string, exposedModule: string): Promise<T> {
-
-    console.log(remoteName);
-
-      const container = window[remoteName] as Container;
-      const factory = await container.get(exposedModule);
-      const Module = factory();
-      return Module as T;
+    const container = window[remoteName] as Container;
+    const factory = await container.get(exposedModule);
+    const Module = factory();
+    return Module as T;
 }
 
 async function initRemote(remoteName: string) {

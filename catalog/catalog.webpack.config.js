@@ -5,17 +5,17 @@ const { merge } = require('webpack-merge');
 module.exports = (config, options, targetOptions) => {
   const mfConfig = {
     output: {
-        uniqueName: "dashboard"
+        uniqueName: "catalog"
     },
     optimization: {
       runtimeChunk: false
     },
     plugins: [
       new ModuleFederationPlugin({
-        name: 'dashboard',
+        name: 'catalog',
         filename: 'remoteEntry.js',
         exposes: {
-          './Dashboard': './src/app/dashboard/dashboard.module.ts'
+          './Catalog': './src/app/catalog/catalog.module.ts'
         },
         shared: {
           '@angular/core': {
