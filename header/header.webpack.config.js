@@ -5,14 +5,17 @@ const { merge } = require('webpack-merge');
 module.exports = (config, options, targetOptions) => {
   const mfConfig = {
     output: {
-        uniqueName: "shell"
+        uniqueName: "header"
     },
     optimization: {
       runtimeChunk: false
     },
     plugins: [
       new ModuleFederationPlugin({
-        remotes: {
+        name: 'header',
+        filename: 'remoteEntry.js',
+        exposes: {
+          './Header': './src/app/components/header/header.component.ts'
         },
         shared: {
           '@angular/core': {
