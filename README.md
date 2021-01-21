@@ -63,3 +63,8 @@ cd header
 yarn install
 ng serve --port 5500
 ```
+
+## Considerations
+Look further into the ability for the shell application to use the more generic concept of web-components instead of angular specifics to make the application even more framework / platform agnostic. The ideal scenario would be for each individual microfrontend to be able to run either Angular, Vue or React harmoniously in the Shell app.
+
+Some other things that are not solved in this repository is framework agnostic routing. The shell app is made with angular and is thus using Angulars routing. This gives some benefits in that each microfrontend can expose a module which in turn has subrouting which will automatically hook into the shell routes. The drawbacks are the angular vendor-lock-in. 
